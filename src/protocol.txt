@@ -1,0 +1,55 @@
+Protocol Commands:
+
+<something> denotes user input in some way/shape/form.
+
+All card distribution for black cards will happen on the client.
+Card distribution for the white cards will happen on the server.
+
+
+
+Client to Server
+    -------Chat Specific--------------
+    login;<username>;<room_password>                    -Login to server
+    quit                                                -Quit the server
+    message;<username>;<message>                        -Message a user a message
+    users                                               -Display a list of users
+
+
+    -------Game Specific--------------
+    getBlackCard                                        -Server gives the player a new black card if they need it.
+    submit;<card message>                               -Submit a card in the judge round.
+
+    setWinningCard;<card message>                       -Judge sends to server and server processes it...
+
+
+
+
+
+Server to Client:
+
+    message;<some_message>                              -Some message that does not pertain to other stages.
+
+    startingGame;<time>
+
+    --Judging Phase--
+    stage;judge;playerJudge
+    cardsToJudge;<card>
+
+    --Brief delay before next judge appears.
+    stage;results;<winningCard>
+
+
+    card;type;<card message>                            -Will follow stages.
+    winningCard;<card message>
+    judging;<card message>                              -Sends a list of cards to judge
+
+
+
+
+
+
+Server interactions:
+
+    Server serves cards to users that query them.
+
+
