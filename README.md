@@ -12,5 +12,5 @@ Once three players connect it takes 10 seconds before the game starts.  So make 
 
 
 ## Notes
-Each player inserts their own white cards as those are client based.
-The server serves the black cards to players.
+Each player inserts their own black cards as those are client based.
+The server serves the white cards to players.
