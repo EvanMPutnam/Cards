@@ -31,9 +31,6 @@ public class UserInterface extends Application{
     private boolean canSubmit = false;
 
 
-
-
-    //TODO check what the heck THIS user interface thing is???  Why am I passing it in???
     private boolean handleLogin(String username, String roomPass, String ip){
         Client cl = new Client(username, roomPass, ip, this, this.generator);
         if (cl.getConnected()){
